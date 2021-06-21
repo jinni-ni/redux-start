@@ -1,10 +1,11 @@
 import { useRef } from "react";
-import useReduxDispatch from "../hooks/useReduxDispatch";
+// import useReduxDispatch from "../hooks/useReduxDispatch";
 import { addTodo } from "../redux/actions";
+import { connect } from "react-redux";
 
-export default function TodoForm() {
+export default function TodoForm({ add }) {
   const inputRef = useRef();
-  const dispatch = useReduxDispatch();
+  //   const dispatch = useReduxDispatch();
   return (
     <div>
       <input ref={inputRef}></input>
@@ -12,6 +13,7 @@ export default function TodoForm() {
     </div>
   );
   function click() {
-    dispatch(addTodo(inputRef.current.value));
+    //dispatch(addTodo(inputRef.current.value));
+    add(inputRef.current.value);
   }
 }
