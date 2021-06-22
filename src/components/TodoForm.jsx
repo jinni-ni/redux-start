@@ -1,6 +1,6 @@
 import { useRef } from "react";
 // import useReduxDispatch from "../hooks/useReduxDispatch";
-import { addTodo } from "../redux/actions";
+import { addTodo } from "../redux/modules/todos";
 import { connect } from "react-redux";
 
 export default function TodoForm({ add }) {
